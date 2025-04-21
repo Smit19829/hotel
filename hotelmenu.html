@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<style>
+  .container {
+    color: antiquewhite;
+    margin-top: 10px;
+
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+  }
+
+  .btn3 {
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .btn5 {
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+  }
+
+
+  .add {
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: underline;
+  }
+
+  .gst {
+    text-decoration: underline;
+  }
+</style>
+
+<body>
+
+  <!-- navigation bar  -->
+
+  <nav class="navbar navbar-expand-lg text-bg-warning">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="img/i (1).webp" height="50px" alt="" srcset=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">About us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Chinese</a></li>
+              <li><a class="dropdown-item" href="#">Punjabi</a></li>
+              <li><a class="dropdown-item" href="#">Pizza</a></li>
+              <li><a class="dropdown-item" href="#">Gujarati</a></li>
+              <li><a class="dropdown-item" href="#">Mexican</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="box text-bg-success">
+    <div class="container">
+      <div class="row row-cols-lg-5 row-cols-md-3 row-cols-md-2">
+        <div class="col py-2">
+          <div class="card h-100 ">
+            <img src="img/product-img-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text mb-1">Snack & Munchies</p>
+              <h5 class="card-title">Haldiram's Sev Bhujia</h5>
+              <div class="star"><img src="img/i (9).webp" alt="" height="15px">4.3(5)</div>
+              <div class="d-flex justify-content-between mt-4">
+                <span class="text fw-semibold">$100</span>
+                <span class="text-decoration-line-through ">$120</span>
+                <button class="btn3" id="btn1" onclick="addToCart('100')">Add</button>
+                <button class="btn5" onclick="removeFromCart('100')">Remove</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col py-2">
+          <div class="card h-100">
+            <img src="img/product-img-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text mb-1">Bakery & Biscuits</p>
+              <h5 class="card-title">NutriChoice Digestive</h5>
+              <div class="star"><img src="img/i (9).webp" alt="" height="15px">4.3(5)</div>
+              <div class="d-flex justify-content-between mt-4">
+                <span class="text fw-semibold">$200</span>
+                <span class="text-decoration-line-through">$228</span>
+                <button class="btn3" id="btn2" onclick="addToCart('200')">Add</button>
+                <button class="btn5" onclick="removeFromCart('200')">Remove</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col py-2">
+          <div class="card h-100">
+            <img src="img/product-img-3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text mb-1">Bakery & Biscuits</p>
+              <h5 class="card-title">Cadbury 5 Star Chocolate</h5>
+              <div class="star"><img src="img/i (9).webp" alt="" height="15px">4.3(5)</div>
+              <div class="d-flex justify-content-between mt-4">
+                <span class="text fw-semibold">$300</span>
+                <span class="text-decoration-line-through">$400</span>
+                <button class="btn3" id="btn3" onclick="addToCart('300')">Add</button>
+                <button class="btn5" onclick="removeFromCart('300')">Remove</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col py-2">
+          <div class="card h-100">
+            <img src="img/product-img-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text mb-1">Snack & Munchies</p>
+              <h5 class="card-title">Onion Flavour Potato</h5>
+              <div class="star"><img src="img/i (9).webp" alt="" height="15px">4.3(5)</div>
+              <div class="d-flex justify-content-between mt-4">
+                <span class="text fw-semibold">$200</span>
+                <span class="text-decoration-line-through">$300</span>
+                <button class="btn3" id="btn4" onclick="addToCart('200')">Add</button>
+                <button class="btn5" onclick="removeFromCart('200')">Remove</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col py-2">
+          <div class="card h-100">
+            <table style="width:100%">
+              <tr>
+                <th>Cart</th>
+                <th id="cart-count">0</th>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td id="cart-price">0</td>
+              </tr>
+              <tr>
+                <td>GST 18%</td>
+                <td id="cart-gst">0</td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td id="cart-total"></td>
+              </tr>
+              <tr>
+                <td>Discount</td>
+                <td id="cart-discount"></td>
+              </tr>
+              <tr>
+                <td><button class="btn3" id="btn5" onclick="discount('5')">5% </button></td>
+                <!-- <td><button class="btn3" id="btn5" onclick="discount('5%')">5% </button></td> -->
+                <td><button class="btn3" id="btn6" onclick="discount('25')">25%</button></td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td id="total"></td>
+              </tr>
+              <tr>
+                <th colspan="2">Thank you visit again</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+
+    count = 0;
+    price = 0;
+    disamount = 0;
+
+    function addToCart(p) {
+      count++;
+      price = price + parseInt(p);
+      document.getElementById("cart-count").innerHTML = count;
+      document.getElementById("cart-price").innerHTML = price;
+
+      gp = document.getElementById("cart-price").innerText;
+
+      gstprice = parseInt(gp) * 18 / 100;
+
+      document.getElementById("cart-gst").innerText = gstprice;
+      document.getElementById("cart-total").innerText = parseInt(gp) + gstprice;
+
+    }
+
+    function discount(percentage) {
+
+      gamount = document.getElementById("cart-total").innerText;
+      console.log(gamount)
+
+      // disamount = parseInt(gamount) *  parseInt(percentage) / 100;
+      disamount = parseInt(gamount) * percentage / 100;
+
+      document.getElementById("cart-discount").innerText = disamount;
+
+      document.getElementById("total").innerText = parseInt(gamount) - disamount;
+
+    }
+
+    function removeFromCart(p) {
+      count--;
+      price = price - parseInt(p);
+      document.getElementById("cart-count").innerHTML = count;
+      document.getElementById("cart-price").innerHTML = price;
+
+      gp = document.getElementById("cart-price").innerText;
+
+      gstprice = parseInt(gp) * 18 / 100;
+
+      document.getElementById("cart-gst").innerText = gstprice;
+      document.getElementById("cart-total").innerText = parseInt(gp) - gstprice;
+
+    }
+  </script>
+
+</body>
+<script src="js/Untitled-1.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</html>
