@@ -1,2 +1,2 @@
 # hotel
-my name is smit
+<h1>My name is smit</h1>
