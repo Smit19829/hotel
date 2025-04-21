@@ -1,2 +1,2 @@
 # hotel
-#my name is smit
+my name is smit
